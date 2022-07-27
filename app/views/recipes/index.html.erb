@@ -1,14 +1,14 @@
 <h1 align="center">List of All Recipes</h1>
 
-
-
 <table class="ui fixed table">
+<tbody>
 
-  <%= @recipe.each do |r| %>
+<% @recipe.each do |r| %>
     <tr>
-      <td> <%= r.name %> <br>  <%= link_to "remove", class:"nav-link" %> </td>
+      <td> <%= r.name %> <br> <%= button_to 'Remove', recipe_path(r), method: :delete,  class:' btn btn-outline-danger' %>  </td>
       <td> <%= r.desciption %> </td>
     </tr>
     <% end %>
-  </tbody>
+</tbody>
 </table>
+
