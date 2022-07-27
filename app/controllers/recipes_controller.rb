@@ -3,5 +3,7 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @recipe=Recipe.new
+    @user=current_user
   end
 end
