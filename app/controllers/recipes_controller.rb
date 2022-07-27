@@ -15,3 +15,11 @@ class RecipesController < ApplicationController
     redirect_to recepes_path
   end
 end
+private
+ def recipe_params 
+  params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :desciption, :public)
+
+ end
+
+
+end
