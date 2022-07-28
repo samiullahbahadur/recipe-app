@@ -44,9 +44,9 @@
       <td><%= f.quantity %></td>
       <td><%= f.price %></td>
    
-     <td><%= button_to 'Modify', food_path(f) , class:' btn btn-outline-info' %> </td>
+     <td><%= button_to 'Modify', user_food_path(f) , class:' btn btn-outline-info' %> </td>
   
-      <td><%= button_to 'Remove', food_path(f), method: :delete,  class:' btn btn-outline-danger' %> </td>
+      <td><%= button_to 'Remove', user_food_path(f), method: :delete,  class:' btn btn-outline-danger' %> </td>
       
   
       </tr>
