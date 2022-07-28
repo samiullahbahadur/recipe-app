@@ -5,7 +5,9 @@
 
 <% @recipe.each do |r| %>
     <tr>
-      <td> <%= link_to r.name, r , class:"nav-link" %> <br> <%= button_to 'Remove', recipe_path(r), method: :delete,  class:' nav-link-outline' %>  </td>
+      <td> <%= link_to r.name, user_recipe_path(r.user_id, r.id) , class:"nav-link" %> 
+      <br> 
+      <%= button_to 'Remove', user_recipe_path(r.user_id, r.id), method: :delete,  class:' nav-link-outline' %>  </td>
       <td> <%= r.desciption %> </td>
     </tr>
     <% end %>
