@@ -1,0 +1,55 @@
+<h1 align="center"> <%=@recipe.name %></h1>
+<br>
+<div class="public_preparation">
+<h2 > Preparations time:  <%=@recipe.preparation_time %> </h2>
+<h1>Public <button> On</button></h1>
+
+</div>
+
+<h2> Cooking time:<%=@recipe.cooking_time %> </h2>
+
+<h2> Steps go here... </h2>
+<br>
+<div class="generate_shopping_list">
+<h2  >
+<%= button_to "Generate shopping list"  %>
+</h2>
+<h2 class="add_ingredient" >
+<%= button_to "Add ingredient"  %>
+</h2>
+</div>
+<hr>
+<br>
+
+
+
+<table class=" table table-striped table-hover  table-bordered">
+<thead >
+<tr>
+<th>Food</th>
+<th>Quantity </th>
+<th>Value </th>
+
+<th  colspan="2" style="text-align:center" >Actions</th>
+
+
+</tr>
+  
+  
+</thead>
+<tbody>
+<% @food.each  do |f| %>
+    <tr>
+      <td><%= f.name %></td>
+      <td><%= f.quantity %></td>
+      <td><%= f.price %></td>
+   
+     <td><%= button_to 'Modify', food_path(f) , class:' btn btn-outline-info' %> </td>
+  
+      <td><%= button_to 'Remove', food_path(f), method: :delete,  class:' btn btn-outline-danger' %> </td>
+      
+  
+      </tr>
+   <% end %>
+</tbody>
+</table>

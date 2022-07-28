@@ -39,3 +39,17 @@
     width: 600px;
     
 }
+
+.public_preparation{
+    display: flex;
+    justify-content: space-between;
+}
+.generate_shopping_list{
+   
+   display: flex;
+   justify-content: space-between;
+}
+.links{
+    display: flex;
+    
+}
