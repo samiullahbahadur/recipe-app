@@ -1,6 +1,6 @@
 <h1 align="center">List of All Foods</h1>
 <span   align="right">
-<%= link_to  "Add Food ", new_food_path, class:"nav-link" %></span>
+<%= link_to  "Add Food ", new_user_food_path, class:"nav-link" %></span>
 <table class="ui single line table">
   <thead>
     <tr>
@@ -16,7 +16,7 @@
       <td><%= f.name %></td>
       <td><%= f.measurement_unit %></td>
       <td><%= f.price %></td>
-      <td> <%= button_to 'Delete', food_path(f), method: :delete,  class:' btn btn-outline-danger' %> </td>
+      <td> <%= button_to 'Delete', user_food_path(f.user_id, f.id), method: :delete,  class:' btn btn-outline-danger' %> </td>
     </tr>
    <% end %>
   </tbody>
