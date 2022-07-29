@@ -2,7 +2,7 @@
 <div class="col-lg-12" id="signup">
   <%= form_with model: @recipe, url: user_recipes_path(@user) do |form| %>
     <div class="mb-3">
-    <%= form.text_field :name, placeholder: "Enter Your Name", class: "form-control" %>
+    <%= form.text_field :name, placeholder: "Enter a recipe", class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.text_field :preparation_time, placeholder: "Enter Preparation Time", class: "form-control" %>
