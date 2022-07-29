@@ -1,24 +1,65 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# My_Recipe_App
 
-Things you may want to cover:
+> Ruby on Rails basic project to build a structure for recipes, recipes details and where the user can login and then create a recipe accordingly.
 
-* Ruby version
+## Run the project
 
-* System dependencies
+`rails s`
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby
+- Ruby linters
+- stylint linters
+- Ruby on Rails
 
-* Database initialization
+## preequests
 
-* How to run the test suite
+- postgresql database in your machine
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting Started
 
-* Deployment instructions
+To get a local copy up and running follow these simple example steps.
 
-* ...
+- SSH:
+  - `git@github.com:samiullahbahadur/recipe-app.git`
+- HTTPS:
+  - `https://github.com/samiullahbahadur/recipe-app.git`
+
+then run:
+
+- `bundle install`
+- `npm install`
+
+## Run tests
+
+Run `rspec`
+
+## Authors
+
+👤 **Samiullah Bahadur**
+
+- GitHub: [@bahadur](https://github.com/samiullahbahadur)
+- Twitter: [@bahadur](https://twitter.com/bushera_mestofa)
+- LinkedIn: [@bahadur](https://www.linkedin.com/in/samiullah-bahadur/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/samiullahbahadur/blog_app/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse: [microverse community](https://github.com/microverseinc)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
