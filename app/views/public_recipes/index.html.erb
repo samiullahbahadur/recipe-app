@@ -4,7 +4,7 @@
   <div class="border border-2 p-4 my-5 d-flex">
     <div class="flex container">
       <h2 class="fw-bold">
-        <%= link_to recipe.name, user_recipe_path(user_id: recipe.user.id, id: recipe.id), method: :get %>
+        <%= link_to recipe.name, user_recipe_path(user_id: recipe.user.id, id: recipe.id), class:"nav-link" %>
       </h2>
       <p>By: <%= recipe.user.name %></p>
     </div>
