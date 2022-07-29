@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   end
   resources :public_recipes, only: :index
   # Defines the root path route ("/")
-  root 'users#index'
+  root 'public_recipes#index'
 end
