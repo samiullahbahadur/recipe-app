@@ -1,22 +1,27 @@
+ <h1 align="center"> All Recipes</h1>
 
-
-
-<div>
-  <h1>All recipes</h1>
-
-  <% if @user==current_user %>
-    <button><%= link_to "Add new Recipe", new_user_recipe_path %></button>
+<% if @user==current_user %>
+ 
+<span   align="right">
+<%= link_to  "Add New Recipe ",new_user_recipe_path, class:"nav-link" %></span>
   <% end %>
-</div>
-<div>
-  <% if @user==current_user %>
-    <% @user.recipe.each do |recipe| %>
-      <%= render recipe %>
-    <% end %>
 
-  <% else %>
-    <% @user.recipe.where(public: true).each do |recipe| %>
-      <%= render  recipe %>
+ <table class="ui fixed table">
+ <tbody>
+
+ <% @user.recipe.each do |r| %>
+     <tr>
+       <td> <%= link_to r.name, user_recipe_path(r.user_id, r.id) , class:"nav-link" %> 
+      
+       <br> 
+        
+       
+       <%= button_to 'Remove', user_recipe_path(r.user_id, r.id), method: :delete,  class:' nav-link-outline' %>  </td>
+         
+      <td> <%= r.desciption %> </td>
+
+     </tr>
     <% end %>
-  <% end %>
-</div>
+ </tbody>
+</table>
+
