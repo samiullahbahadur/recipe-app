@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
     respond_to do |format|
       if @recipe.save!
         format.html do
-          redirect_to user_recipe_path(@recipe.user_id, @recipe.id), notice: 'Recipe created successfully!'
+          redirect_to user_recipes_path, notice: 'Recipe created successfully!'
         end
       else
         format.html { redirect_to new_user_recipes_path, alert: 'Failed to create recipe' }

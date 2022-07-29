@@ -28,6 +28,7 @@ class RecipeFoodsController < ApplicationController
       flash[:success] = 'Ingredient was added!'
     else
       redirect_to new_recipe_recipe_food_path
+      render 'new'
       flash[:error] = 'ERROR, Ingredient not added!'
     end
   end
