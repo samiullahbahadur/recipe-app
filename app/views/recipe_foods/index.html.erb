@@ -1,23 +1,33 @@
-<h1 class='title'>Shopping List</h1>
-<div class="flex container">
+
+
+
+<br>
+<h1 class="inventory-heading">Shopping List</h1>
+<br>
+
+<div class="shopping_list">
   <div>Amount of food items to buy: <%= @total_items %></div>
-  <div>Total value of food nested: <%= @total_value %></div>
+  <div>Total value of food nested: $<%= @total_value %></div>
 </div>
 
-<div class="index flex-col">
-  <table class="food-container">
+<div class="center">
+<br>
+  <table class="ui single line table table-bordered table-striped ">
+  <thead style="ba">
   <tr>
     <th>Food</th>
     <th>Quantity</th>
     <th>Price</th>
   </tr>
-
+</thead>
+<tbody>
   <%@recipe_foods.each do |item|%>
   <tr>
     <td><%= item.food.name %></td>
     <td><%= item.quantity %> <%= item.food.measurement_unit %></td>
-    <td><%= item.food.price * item.quantity %>$</td>
+    <td>$<%= item.food.price * item.quantity %></td>
   </tr>
   <%end%>
+  </tbody>
 </table>
 </div>
