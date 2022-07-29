@@ -1,6 +1,8 @@
 <h1  align="center">Add new Foods</h1>
 <div class="col-lg-12" id="signup">
-  <%= form_with model: @food, url: foods_path(@user) do |form| %>
+  <%= form_with model: @food, url: user_foods_path(@user) do |form| %>
+   
+  
     <div class="mb-3">
     <%= form.text_field :name, placeholder: "Enter Your Name", class: "form-control" %>
     </div>

@@ -13,10 +13,10 @@ class FoodsController < ApplicationController
     @food.user = current_user
     if @food.save
       flash[:notice] = "New Food successfully Saved! "
-      redirect_to foods_path
+      redirect_to user_foods_path
 
     else
-      flash[:alert] = "somethings was wrong "
+      flash[:alert] = "somethings was wrong and name exis  "
       render 'new'
     end
   end
@@ -25,7 +25,7 @@ class FoodsController < ApplicationController
     @food = Food.find(params[:id])
     @food.destroy
     flash[:notice] = "Food was successfully deleted"
-    redirect_to foods_path
+    redirect_to user_foods_path
   end
 
   private
