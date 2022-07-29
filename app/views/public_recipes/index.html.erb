@@ -1,0 +1,28 @@
+<h1 class="text-center">Public Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+  <div class="border border-2 p-4 my-5 d-flex">
+    <div class="flex container">
+      <h2 class="fw-bold">
+        <%= link_to recipe.name, user_recipe_path(user_id: recipe.user.id, id: recipe.id), method: :get %>
+      </h2>
+      <p>By: <%= recipe.user.name %></p>
+    </div>
+
+    <div class="flex container">
+      <% @recipe_data = recipe.recipe_foods.includes(:food) %>
+      <p>
+        <span class="fw-bold">Total food items:</span>
+        <%= @recipe_data.length %>
+      </p>
+      <p>
+        <span class="fw-bold">Total price:</span>
+        <% @total_value = 0 %>
+        <% @recipe_data.each do |f| %>
+          <% @total_value += f.quantity * f.food.price %>
+        <% end %>
+        $<%= @total_value %>
+      </p>
+    </div>
+  </div>
+<% end %>
